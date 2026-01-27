@@ -2,570 +2,291 @@
   "standings": [
     {
       "rank": 1,
-      "name": "61.5",
-      "total_points": 30,
+      "name": "Robert Ploem",
+      "total_points": 33,
       "sections": {
-        "Blok 1": 18
+        "Blok 1": 7.5,
+        "Blok 2": 3.5
       }
     },
     {
       "rank": 2,
-      "name": "Sebastiaan Van Asselen",
-      "total_points": 25,
+      "name": "Maarten Remkes",
+      "total_points": 26.5,
       "sections": {
-        "Blok 1": 7,
-        "Blok 2": 18
+        "Blok 1": 7.5,
+        "Blok 2": 2
       }
     },
     {
       "rank": 3,
-      "name": "Rob Verheul",
-      "total_points": 25,
+      "name": "Roel Van der Velde",
+      "total_points": 25.5,
       "sections": {
-        "Blok 1": 6,
-        "Blok 2": 19
+        "Blok 1": 6.5,
+        "Blok 2": 2
       }
     },
     {
       "rank": 4,
-      "name": "Peter Van Rijswijk",
-      "total_points": 23,
+      "name": "Sebastiaan Van Asselen",
+      "total_points": 24,
       "sections": {
-        "Blok 1": 3,
-        "Blok 2": 20
+        "Blok 1": 7,
+        "Blok 2": 1.5
       }
     },
     {
       "rank": 5,
-      "name": "Erik Roozeboom",
-      "total_points": 22,
+      "name": "George Van Geerenstein",
+      "total_points": 24,
       "sections": {
-        "Blok 1": 5,
-        "Blok 2": 17
+        "Blok 1": 6,
+        "Blok 2": 2
       }
     },
     {
       "rank": 6,
-      "name": "54.5",
-      "total_points": 20,
+      "name": "Bas Geerdink",
+      "total_points": 24,
       "sections": {
-        "Blok 1": 20
+        "Blok 1": 6,
+        "Blok 2": 2
       }
     },
     {
       "rank": 7,
-      "name": "56.5",
-      "total_points": 13,
+      "name": "Guido Galesloot",
+      "total_points": 24,
       "sections": {
-        "Blok 1": 13
+        "Blok 1": 6,
+        "Blok 2": 2
       }
     },
     {
       "rank": 8,
-      "name": "↓-36",
-      "total_points": 11,
+      "name": "Hussam Alzinou Alsaloum",
+      "total_points": 23.5,
       "sections": {
-        "Blok 1": 5
+        "Blok 1": 6.5,
+        "Blok 2": 4
       }
     },
     {
       "rank": 9,
-      "name": "Paul Meijer",
-      "total_points": 10,
+      "name": "Bert De Weerd",
+      "total_points": 21.5,
       "sections": {
-        "Blok 1": 3,
-        "Blok 2": 7
+        "Blok 1": 5.5,
+        "Blok 2": 2.5
       }
     },
     {
       "rank": 10,
-      "name": "Hans Müller",
-      "total_points": 9,
-      "sections": {
-        "Blok 1": 8,
-        "Blok 2": 1
-      }
-    },
-    {
-      "rank": 11,
-      "name": "George Van Geerenstein",
-      "total_points": 8,
-      "sections": {
-        "Blok 1": 6,
-        "Blok 2": 2
-      }
-    },
-    {
-      "rank": 12,
-      "name": "Bas Geerdink",
-      "total_points": 8,
-      "sections": {
-        "Blok 1": 6,
-        "Blok 2": 2
-      }
-    },
-    {
-      "rank": 13,
-      "name": "Guido Galesloot",
-      "total_points": 8,
-      "sections": {
-        "Blok 1": 6,
-        "Blok 2": 2
-      }
-    },
-    {
-      "rank": 14,
-      "name": "Bert De Weerd",
-      "total_points": 8,
-      "sections": {
-        "Blok 2": 8
-      }
-    },
-    {
-      "rank": 15,
-      "name": "↓-2",
-      "total_points": 7,
-      "sections": {
-        "Blok 1": 7
-      }
-    },
-    {
-      "rank": 16,
       "name": "George Van Hutten",
-      "total_points": 7,
+      "total_points": 21,
       "sections": {
         "Blok 1": 4,
         "Blok 2": 3
       }
     },
     {
-      "rank": 17,
-      "name": "↑14",
-      "total_points": 6,
+      "rank": 11,
+      "name": "Andre Van Dijk",
+      "total_points": 20.5,
+      "sections": {
+        "Blok 1": 6.5,
+        "Blok 2": 2.5
+      }
+    },
+    {
+      "rank": 12,
+      "name": "Erik Roozeboom",
+      "total_points": 19.5,
+      "sections": {
+        "Blok 1": 5,
+        "Blok 2": 1.5
+      }
+    },
+    {
+      "rank": 13,
+      "name": "Dirk Van de Geer jr.",
+      "total_points": 18,
       "sections": {
         "Blok 1": 6
+      }
+    },
+    {
+      "rank": 14,
+      "name": "Nadja Van Schoemaker",
+      "total_points": 16.5,
+      "sections": {
+        "Blok 1": 4.5,
+        "Blok 2": 1
+      }
+    },
+    {
+      "rank": 15,
+      "name": "Leo V.d. Bovenkamp",
+      "total_points": 16.5,
+      "sections": {
+        "Blok 1": 3.5,
+        "Blok 2": 2
+      }
+    },
+    {
+      "rank": 16,
+      "name": "Rob Verheul",
+      "total_points": 15,
+      "sections": {
+        "Blok 1": 6,
+        "Blok 2": 1.5
+      }
+    },
+    {
+      "rank": 17,
+      "name": "Theo Van der Poll",
+      "total_points": 15,
+      "sections": {
+        "Blok 1": 5
       }
     },
     {
       "rank": 18,
-      "name": "Dirk Van de Geer jr.",
-      "total_points": 6,
+      "name": "Remco Claessens",
+      "total_points": 15,
       "sections": {
-        "Blok 1": 6
+        "Blok 1": 4.5,
+        "Blok 2": 2
       }
     },
     {
       "rank": 19,
-      "name": "↓-16",
-      "total_points": 6,
+      "name": "Cili Kocsis",
+      "total_points": 15,
       "sections": {
-        "Blok 1": 6
+        "Blok 1": 3,
+        "Blok 2": 1
       }
     },
     {
       "rank": 20,
-      "name": "↓-50",
-      "total_points": 6,
+      "name": "Chris Van Meer",
+      "total_points": 14,
       "sections": {
-        "Blok 1": 6
+        "Blok 1": 5.5,
+        "Blok 2": 1
       }
     },
     {
       "rank": 21,
-      "name": "↑19",
-      "total_points": 6,
+      "name": "Jan Van Oort",
+      "total_points": 14,
       "sections": {
-        "Blok 1": 6
+        "Blok 1": 5.5,
+        "Blok 2": 1
       }
     },
     {
       "rank": 22,
+      "name": "Ghassan Azzouz",
+      "total_points": 13.5,
+      "sections": {
+        "Blok 1": 4.5
+      }
+    },
+    {
+      "rank": 23,
       "name": "Ben De Ree",
-      "total_points": 6,
+      "total_points": 12,
       "sections": {
         "Blok 1": 3,
         "Blok 2": 3
       }
     },
     {
-      "rank": 23,
-      "name": "Andre Van Dijk",
-      "total_points": 6,
-      "sections": {
-        "Blok 2": 6
-      }
-    },
-    {
       "rank": 24,
-      "name": "↓-3",
-      "total_points": 5,
+      "name": "Peter Van Rijswijk",
+      "total_points": 12,
       "sections": {
-        "Blok 1": 5
+        "Blok 1": 3,
+        "Blok 2": 1.5
       }
     },
     {
       "rank": 25,
-      "name": "↓-24",
-      "total_points": 5,
-      "sections": {}
+      "name": "Paul Meijer",
+      "total_points": 11,
+      "sections": {
+        "Blok 1": 3,
+        "Blok 2": 2.5
+      }
     },
     {
       "rank": 26,
-      "name": "Theo Van der Poll",
-      "total_points": 5,
+      "name": "Ruud Wouters",
+      "total_points": 11,
       "sections": {
-        "Blok 1": 5
+        "Blok 1": 2.5,
+        "Blok 2": 2
       }
     },
     {
       "rank": 27,
-      "name": "Hans Van Dijk",
-      "total_points": 5,
+      "name": "Hans Müller",
+      "total_points": 10,
       "sections": {
-        "Blok 1": 5
+        "Blok 1": 8,
+        "Blok 2": 1
       }
     },
     {
       "rank": 28,
-      "name": "Ghassan Azzouz",
-      "total_points": 5,
+      "name": "Hans Van Dijk",
+      "total_points": 10,
       "sections": {
         "Blok 1": 5
       }
     },
     {
       "rank": 29,
-      "name": "↓-13",
-      "total_points": 5,
+      "name": "Duco Douwstra",
+      "total_points": 9,
       "sections": {
         "Blok 1": 3,
-        "Blok 2": 2
+        "Blok 2": 1
       }
     },
     {
       "rank": 30,
-      "name": "Cili Kocsis",
-      "total_points": 4,
+      "name": "Maarten De Weerd",
+      "total_points": 5,
       "sections": {
-        "Blok 1": 3,
-        "Blok 2": 1
+        "Blok 1": 2.5
       }
     },
     {
       "rank": 31,
-      "name": "Duco Douwstra",
-      "total_points": 4,
+      "name": "Roy Hol",
+      "total_points": 3,
       "sections": {
-        "Blok 1": 3,
-        "Blok 2": 1
+        "Blok 1": 1
       }
     },
     {
       "rank": 32,
-      "name": "Hussam Alzinou Alsaloum",
-      "total_points": 4,
-      "sections": {
-        "Blok 2": 4
-      }
-    },
-    {
-      "rank": 33,
-      "name": "↓-46",
-      "total_points": 3,
-      "sections": {
-        "Blok 1": 3
-      }
-    },
-    {
-      "rank": 34,
-      "name": "extern 6",
-      "total_points": 3,
-      "sections": {
-        "Blok 1": 3
-      }
-    },
-    {
-      "rank": 35,
-      "name": "66.5",
-      "total_points": 3,
-      "sections": {
-        "Blok 1": 3
-      }
-    },
-    {
-      "rank": 36,
-      "name": "extern 4",
-      "total_points": 3,
-      "sections": {
-        "Blok 1": 3
-      }
-    },
-    {
-      "rank": 37,
-      "name": "63.5",
-      "total_points": 3,
-      "sections": {
-        "Blok 1": 3
-      }
-    },
-    {
-      "rank": 38,
-      "name": "↓-26",
-      "total_points": 3,
-      "sections": {
-        "Blok 1": 3
-      }
-    },
-    {
-      "rank": 39,
-      "name": "↓-34",
-      "total_points": 3,
-      "sections": {
-        "Blok 1": 3
-      }
-    },
-    {
-      "rank": 40,
-      "name": "↓-4",
-      "total_points": 3,
-      "sections": {
-        "Blok 1": 3
-      }
-    },
-    {
-      "rank": 41,
-      "name": "Robert Ploem",
-      "total_points": 3,
-      "sections": {
-        "Blok 2": 3
-      }
-    },
-    {
-      "rank": 42,
-      "name": "↑34",
-      "total_points": 3,
-      "sections": {
-        "Blok 2": 3
-      }
-    },
-    {
-      "rank": 43,
-      "name": "↓-12",
-      "total_points": 2,
-      "sections": {
-        "Blok 2": 2
-      }
-    },
-    {
-      "rank": 44,
-      "name": "Maarten Remkes",
-      "total_points": 2,
-      "sections": {
-        "Blok 2": 2
-      }
-    },
-    {
-      "rank": 45,
-      "name": "↑10",
-      "total_points": 2,
-      "sections": {
-        "Blok 2": 2
-      }
-    },
-    {
-      "rank": 46,
-      "name": "Remco Claessens",
-      "total_points": 2,
-      "sections": {
-        "Blok 2": 2
-      }
-    },
-    {
-      "rank": 47,
-      "name": "↑17",
-      "total_points": 2,
-      "sections": {
-        "Blok 2": 2
-      }
-    },
-    {
-      "rank": 48,
-      "name": "Roel Van der Velde",
-      "total_points": 2,
-      "sections": {
-        "Blok 2": 2
-      }
-    },
-    {
-      "rank": 49,
-      "name": "↓-7",
-      "total_points": 2,
-      "sections": {}
-    },
-    {
-      "rank": 50,
-      "name": "Leo V.d. Bovenkamp",
-      "total_points": 2,
-      "sections": {
-        "Blok 2": 2
-      }
-    },
-    {
-      "rank": 51,
-      "name": "↑15",
-      "total_points": 2,
-      "sections": {
-        "Blok 2": 2
-      }
-    },
-    {
-      "rank": 52,
-      "name": "Ruud Wouters",
-      "total_points": 2,
-      "sections": {
-        "Blok 2": 2
-      }
-    },
-    {
-      "rank": 53,
-      "name": "↓-10",
-      "total_points": 1,
-      "sections": {
-        "Blok 1": 1
-      }
-    },
-    {
-      "rank": 54,
-      "name": "Roy Hol",
-      "total_points": 1,
-      "sections": {
-        "Blok 1": 1
-      }
-    },
-    {
-      "rank": 55,
-      "name": "↓-8",
-      "total_points": 1,
-      "sections": {
-        "Blok 2": 1
-      }
-    },
-    {
-      "rank": 56,
-      "name": "Jan Van Oort",
-      "total_points": 1,
-      "sections": {
-        "Blok 2": 1
-      }
-    },
-    {
-      "rank": 57,
-      "name": "↓-11",
-      "total_points": 1,
-      "sections": {}
-    },
-    {
-      "rank": 58,
-      "name": "Chris Van Meer",
-      "total_points": 1,
-      "sections": {
-        "Blok 2": 1
-      }
-    },
-    {
-      "rank": 59,
-      "name": "↓-27",
-      "total_points": 1,
-      "sections": {
-        "Blok 2": 1
-      }
-    },
-    {
-      "rank": 60,
-      "name": "Nadja Van Schoemaker",
-      "total_points": 1,
-      "sections": {
-        "Blok 2": 1
-      }
-    },
-    {
-      "rank": 61,
-      "name": "↓-17",
-      "total_points": 1,
-      "sections": {
-        "Blok 2": 1
-      }
-    },
-    {
-      "rank": 62,
-      "name": "↓-21",
-      "total_points": 1,
-      "sections": {
-        "Blok 2": 1
-      }
-    },
-    {
-      "rank": 63,
-      "name": "extern 1",
-      "total_points": 1,
-      "sections": {
-        "Blok 2": 1
-      }
-    },
-    {
-      "rank": 64,
-      "name": "extern 2",
-      "total_points": 1,
-      "sections": {
-        "Blok 2": 1
-      }
-    },
-    {
-      "rank": 65,
-      "name": "extern 3",
-      "total_points": 1,
-      "sections": {
-        "Blok 2": 1
-      }
-    },
-    {
-      "rank": 66,
-      "name": "↓-15",
-      "total_points": 0,
-      "sections": {}
-    },
-    {
-      "rank": 67,
       "name": "Quirino Richardson",
       "total_points": 0,
       "sections": {}
     },
     {
-      "rank": 68,
+      "rank": 33,
       "name": "Freek De Rooij",
-      "total_points": 0,
-      "sections": {}
-    },
-    {
-      "rank": 69,
-      "name": "↓-23",
-      "total_points": 0,
-      "sections": {}
-    },
-    {
-      "rank": 70,
-      "name": "↓-29",
-      "total_points": 0,
-      "sections": {}
-    },
-    {
-      "rank": 71,
-      "name": "Maarten De Weerd",
       "total_points": 0,
       "sections": {}
     }
   ],
-  "updatedAt": "2026-01-27T12:26:08.559Z",
+  "updatedAt": "2026-01-27T12:46:39.366Z",
   "sections": [
     "Blok 1",
     "Blok 2"

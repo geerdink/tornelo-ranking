@@ -25,16 +25,23 @@ async function extractStandings(page) {
     // Debug: Check what's on the page
     const debug = await page.evaluate(() => {
         const tables = document.querySelectorAll('table');
-        const allText = document.body.innerText.substring(0, 500);
+        const allText = document.body.innerText;
         return {
             tableCount: tables.length,
-            bodyText: allText,
+            bodyText: allText.substring(0, 500),
+            fullText: allText, // Save full text for debugging
             hasRows: document.querySelectorAll('tr').length
         };
     });
     
     console.log(`  📊 Debug: ${debug.tableCount} tables, ${debug.hasRows} rows`);
     console.log(`  📄 Body text: ${debug.bodyText.substring(0, 200)}...`);
+    
+    // Save full text to file for debugging
+    const url = await page.url();
+    const sectionName = url.split('/').pop();
+    fs.writeFileSync(`debug-text-${sectionName}.txt`, debug.fullText);
+    console.log(`  💾 Saved full text to debug-text-${sectionName}.txt`);
     
     // Now check if we have a table
     const hasTable = debug.tableCount > 0;
@@ -51,7 +58,7 @@ async function extractStandings(page) {
         
         // Parse from text content since Tornelo doesn't use tables
         const bodyText = document.body.innerText;
-        const lines = bodyText.split('\n').map(l => l.trim());
+        const lines = bodyText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
         
         // Find the standings section (starts after "items" indicator)
         let startIndex = -1;
@@ -65,44 +72,73 @@ async function extractStandings(page) {
         if (startIndex === -1) startIndex = 0;
         
         // Parse player entries
+        // Structure: Rank, (Flag - optional), Player, Rtg, Gender, Score, Perf, +/-, Trophy
         for (let i = startIndex; i < lines.length; i++) {
             const line = lines[i];
+            console.log(line);
             
             // Look for rank number at start
             if (/^\d+$/.test(line)) {
                 const rank = parseInt(line);
-                const name = lines[i + 1];
-                const rating = lines[i + 2];
-                const gender = lines[i + 3]; // Male/Female
-                const points = lines[i + 4];
                 
-                // Validate: name should be text, not "Male" or "Female"
-                if (name && 
-                    name !== 'Male' && name !== 'Female' &&
-                    name.length > 2 &&
-                    !/^\d+$/.test(name)) {
+                // Find the name (next text that's not a number and not Male/Female)
+                let nameIndex = -1;
+                for (let j = i + 1; j < Math.min(i + 5, lines.length); j++) {
+                    const candidate = lines[j];
+                    if (candidate && 
+                        candidate !== 'Male' && 
+                        candidate !== 'Female' &&
+                        candidate.length > 2 &&
+                        !/^\d+$/.test(candidate) &&
+                        !/^[\d.,]+$/.test(candidate) &&
+                        !/^[↑↓]/.test(candidate) && // Not arrows (rating change indicators)
+                        !/^extern/.test(candidate) && // Skip extern entries
+                        /[a-zA-Z]/.test(candidate)) { // Must contain letters
+                        nameIndex = j;
+                        break;
+                    }
+                }
+                
+                if (nameIndex === -1) continue;
+                
+                const name = lines[nameIndex];
+                
+                // Find the score - it's after the name, should be a decimal or whole number 0-15
+                // Structure: name, rating (3-4 digits), gender, score
+                let pointsValue = null;
+                let rating = 0;
+                let foundRating = false;
+                
+                for (let j = nameIndex + 1; j < Math.min(nameIndex + 10, lines.length); j++) {
+                    const candidate = lines[j];
                     
-                    // Find points (should be a reasonable number)
-                    let pointsValue = null;
-                    for (let j = i + 3; j < Math.min(i + 8, lines.length); j++) {
-                        const testLine = lines[j];
-                        if (testLine && /^\d+([.,]\d+)?$/.test(testLine)) {
-                            const num = parseFloat(testLine.replace(',', '.'));
-                            if (num >= 0 && num <= 20) { // Points range
-                                pointsValue = num;
-                                break;
-                            }
+                    // Skip Male/Female
+                    if (candidate === 'Male' || candidate === 'Female') continue;
+                    
+                    // First pure number 3-4 digits after name is rating
+                    if (!foundRating && /^\d{3,4}$/.test(candidate)) {
+                        rating = parseInt(candidate);
+                        foundRating = true;
+                        continue;
+                    }
+                    
+                    // After finding rating, look for score (0-15, can have decimals or ½)
+                    if (foundRating && /^[\d]+([.,][\d]+|½)?$/.test(candidate)) {
+                        const num = parseFloat(candidate.replace(',', '.').replace('½', '.5'));
+                        if (num >= 0 && num <= 15) {
+                            pointsValue = num;
+                            break;
                         }
                     }
-                    
-                    if (pointsValue !== null) {
-                        results.push({
-                            rank: rank,
-                            name: name,
-                            points: pointsValue,
-                            rating: parseInt(rating) || 0
-                        });
-                    }
+                }
+                
+                if (pointsValue !== null) {
+                    results.push({
+                        rank: rank,
+                        name: name,
+                        points: pointsValue,
+                        rating: rating
+                    });
                 }
             }
         }

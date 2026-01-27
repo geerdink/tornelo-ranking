@@ -39,7 +39,7 @@
         cacheDuration: 30,
         
         // Cache version (increment to force refresh)
-        cacheVersion: 3,
+        cacheVersion: 4,
         
         // Auto-refresh interval in minutes (0 = no auto-refresh)
         autoRefresh: 0,
