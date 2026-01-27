@@ -3,9 +3,8 @@ node_modules/
 package-lock.json
 npm-debug.log*
 
-# Output files
-standings.html
-standings.json
+# Debug files
+debug-*.txt
 debug-*.png
 
 # IDE
@@ -19,9 +18,10 @@ debug-*.png
 .DS_Store
 Thumbs.db
 
-# Cache
+# Build artifacts
 .cache/
 
-# Configuration (if you add sensitive data)
-config.js
-secrets.js
+# Generated files (committed for GitHub Pages)
+# tornelo-data.json - DO NOT IGNORE, needed for GitHub Pages
+# standings.json - ignored, only for local reference
+standings.json
