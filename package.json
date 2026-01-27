@@ -1,0 +1,17 @@
+{
+  "name": "tornelo-scraper",
+  "version": "1.0.0",
+  "description": "Automated Tornelo standings scraper using Puppeteer",
+  "main": "scraper.js",
+  "type": "module",
+  "scripts": {
+    "scrape": "node scraper.js",
+    "test": "node scraper.js"
+  },
+  "keywords": ["tornelo", "chess", "scraper"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.9.0"
+  }
+}
