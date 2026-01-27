@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Output files
+standings.html
+standings.json
+debug-*.png
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/
+
+# Configuration (if you add sensitive data)
+config.js
+secrets.js
