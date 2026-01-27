@@ -122,8 +122,9 @@ async function extractStandings(page) {
                         continue;
                     }
                     
-                    // After finding rating, look for score (0-15, can have decimals or ½)
-                    if (foundRating && /^[\d]+([.,][\d]+|½)?$/.test(candidate)) {
+                    // After finding rating, look for score
+                    // Matches: "½", "3", "3.5", "3,5", "3½", etc.
+                    if (foundRating && /^(½|\d+([.,]\d+|½)?)$/.test(candidate)) {
                         const num = parseFloat(candidate.replace(',', '.').replace('½', '.5'));
                         if (num >= 0 && num <= 15) {
                             pointsValue = num;
