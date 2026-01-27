@@ -2,9 +2,7 @@
 
 Fully automated tool to combine standings from multiple Tornelo tournament sections.
 
-## ⭐ NEW: Live WordPress Widget (Zero Manual Work!)
-
-**Perfect for WordPress sites - fetches data in real-time!**
+** ⭐ Perfect for WordPress sites - fetches data in real-time!**
 
 1. **Upload 2 files to WordPress:**
    - `tornelo-live.js` (the widget)
@@ -17,8 +15,6 @@ Fully automated tool to combine standings from multiple Tornelo tournament secti
    ```
 
 3. **Done!** Standings update automatically every 30 minutes.
-
-📖 **See [WORDPRESS-INSTALL.md](WORDPRESS-INSTALL.md) for detailed instructions**
 
 ---
 

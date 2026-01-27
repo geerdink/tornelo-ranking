@@ -28,7 +28,12 @@
             {
                 name: 'Blok 2',
                 url: 'https://tornelo.com/chess/orgs/trio/events/intern-2025-2026/standings/section/blok-2'
+            },
+            {
+                name: 'Blok 3',
+                url: 'https://tornelo.com/chess/orgs/trio/events/intern-2025-2026/standings/section/blok-3'
             }
+
         ],
         
         // Use proxy to avoid CORS issues (auto-detects if running locally)
