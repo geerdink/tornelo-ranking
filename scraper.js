@@ -9,7 +9,7 @@ import fs from 'fs';
 // Configuration
 const CONFIG = {
     baseUrl: 'https://tornelo.com/chess/orgs/trio/events/intern-2025-2026',
-    sections: ['blok-1', 'blok-2'],
+    sections: ['blok-1', 'blok-2', 'blok-3'],
     timeout: 30000, // 30 seconds
     headless: true // Set to false to see the browser
 };
