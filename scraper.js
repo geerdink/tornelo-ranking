@@ -146,7 +146,17 @@ async function extractStandings(page) {
         return results;
     });
     
-    return standings;
+    // Deduplicate by name within this section (keep first occurrence with valid score)
+    const seen = new Set();
+    const deduplicated = standings.filter(player => {
+        if (seen.has(player.name)) {
+            return false;
+        }
+        seen.add(player.name);
+        return true;
+    });
+    
+    return deduplicated;
 }
 
 /**
@@ -206,6 +216,7 @@ function combineStandings(allSections) {
             if (!playerTotals.has(player.name)) {
                 playerTotals.set(player.name, {
                     name: player.name,
+                    rating: player.rating || 0,
                     total_points: 0,
                     sections: {}
                 });
@@ -214,12 +225,21 @@ function combineStandings(allSections) {
             const playerData = playerTotals.get(player.name);
             playerData.total_points += player.points;
             playerData.sections[section] = player.points;
+            // Update rating if higher
+            if (player.rating > playerData.rating) {
+                playerData.rating = player.rating;
+            }
         }
     }
     
-    // Convert to array and sort
+    // Convert to array and sort by total points first, then by rating
     const combined = Array.from(playerTotals.values())
-        .sort((a, b) => b.total_points - a.total_points)
+        .sort((a, b) => {
+            if (b.total_points !== a.total_points) {
+                return b.total_points - a.total_points;
+            }
+            return b.rating - a.rating;
+        })
         .map((player, index) => ({
             rank: index + 1,
             ...player
@@ -379,12 +399,32 @@ async function main() {
         const html = generateHTML(combined, CONFIG.sections);
         const json = JSON.stringify(combined, null, 2);
         
+        // Generate widget JSON format
+        const widgetJSON = {
+            standings: combined.map(player => ({
+                name: player.name,
+                rating: player.rating,
+                total: player.total_points,
+                sections: Object.fromEntries(
+                    Object.entries(player.sections).map(([key, value]) => [
+                        key.replace('blok-', 'Blok '),
+                        value
+                    ])
+                ),
+                rank: player.rank
+            })),
+            sections: CONFIG.sections.map(s => s.replace('blok-', 'Blok ')),
+            updatedAt: new Date().toISOString()
+        };
+        
         fs.writeFileSync('standings.html', html);
         fs.writeFileSync('standings.json', json);
+        fs.writeFileSync('tornelo-data.json', JSON.stringify(widgetJSON, null, 2));
         
         console.log('📁 Files created:');
         console.log('   ✓ standings.html (WordPress ready)');
         console.log('   ✓ standings.json (raw data)');
+        console.log('   ✓ tornelo-data.json (widget format)');
         
         // Display top 10
         console.log('\n' + '='.repeat(70));
