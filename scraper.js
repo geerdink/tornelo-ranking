@@ -361,8 +361,7 @@ async function main() {
     console.log('🚀 Launching browser...');
     const browser = await puppeteer.launch({
         headless: CONFIG.headless ? 'new' : false,
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],
-        executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     
     try {
