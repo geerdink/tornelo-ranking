@@ -8,10 +8,14 @@
     "scrape": "node scraper.js",
     "test": "node scraper.js"
   },
-  "keywords": ["tornelo", "chess", "scraper"],
+  "keywords": [
+    "tornelo",
+    "chess",
+    "scraper"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "puppeteer": "^21.9.0"
+    "puppeteer": "^24.37.2"
   }
 }
